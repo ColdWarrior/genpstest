@@ -19,7 +19,9 @@ var IP = "172.66.47.32";
 var PORT = "443";
 
 var startServer = function () {
-
+	
+	console.log("testa")
+	
     // These keys are for demo purposes and are NOT FOR PRODUCTION!!!!
     // DO NOT USE IN PRODUCTION CODE!!!
     var httpsKey = fs.readFileSync("./dist/service/https/server.key");
