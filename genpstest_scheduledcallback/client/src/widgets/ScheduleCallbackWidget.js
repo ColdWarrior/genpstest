@@ -4,11 +4,11 @@
 
     // This URI should be the URI to your website's back-end service.  In this
     //   case it is the service we have created locally.
-    var serviceApi = new RestApi("https://genpstest-scheduledcallback.pages.dev");
+    var serviceApi = new RestApi("https://apps.mypurecloud.com/api/v2");
 
     // Schedules a callback with the PureCloud Api
     var scheduleCallback = function (scheduledCallbackData) {
-        return serviceApi.post("/purecloud/scheduledcallback", scheduledCallbackData)
+        return serviceApi.post("/conversations/callbacks", scheduledCallbackData)
         .then(function (data) {
             console.log("Created a scheduledCallback!", data);
         })
