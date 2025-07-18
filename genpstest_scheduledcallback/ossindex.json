@@ -1,0 +1,12 @@
+{
+  "author": "Genesys Developer Evangelists",
+  "title": "Callback widget example",
+  "logo_url": "https://developer.mypurecloud.com/images/genesys-icon.svg",
+  "categories": [
+    "callback"
+  ],
+  "tags": [],
+  "apis": [
+    "platform"
+  ]
+}
