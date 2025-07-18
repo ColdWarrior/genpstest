@@ -4,7 +4,7 @@
 
     // This URI should be the URI to your website's back-end service.  In this
     //   case it is the service we have created locally.
-    var serviceApi = new RestApi("https://172.66.47.32:443");
+    var serviceApi = new RestApi("https://104.21.36.5:443");
 
     // Schedules a callback with the PureCloud Api
     var scheduleCallback = function (scheduledCallbackData) {
