@@ -22,22 +22,22 @@ var startServer = function () {
 
     // These keys are for demo purposes and are NOT FOR PRODUCTION!!!!
     // DO NOT USE IN PRODUCTION CODE!!!
-    var httpsKey = fs.readFileSync("./dist/service/https/server.key");
-    var httpsCert = fs.readFileSync("./dist/service/https/server.crt");
+    //var httpsKey = fs.readFileSync("./dist/service/https/server.key");
+    //var httpsCert = fs.readFileSync("./dist/service/https/server.crt");
 
-    server = restify.createServer({
-        key: httpsKey,
-        certificate: httpsCert,
-        rejectUnauthorized: false,
-        name : "schedule-callback-example-service"
-    });
+    //server = restify.createServer({
+    //    key: httpsKey,
+    //   certificate: httpsCert,
+    //    rejectUnauthorized: false,
+    //    name : "schedule-callback-example-service"
+    //});
 
     // restify tutorial:
     //     https://www.openshift.com/blogs/day-27-restify-build-correct-rest-web-services-in-nodejs
 
-    server.use(restify.queryParser());
-    server.use(restify.bodyParser());
-    server.use(restify.CORS());
+    //server.use(restify.queryParser());
+    //server.use(restify.bodyParser());
+    //server.use(restify.CORS());
 
     //---------------------------------------------------------------------------
     // scheduledCallback routes (The core routes of this entire example project)
@@ -61,7 +61,7 @@ var startServer = function () {
     // default
     server.get("/", healthRoutes.healthCheck);
 
-    server.listen(PORT , IP);
+    //server.listen(PORT , IP);
 };
 
 //===================
