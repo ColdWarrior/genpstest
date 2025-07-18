@@ -15,7 +15,8 @@ var pureCloudAppLogin = require("./pureCloudAppLogin");
 
 
 // for production purecloud, this should be "https://api.mypurecloud.com/api/v2"
-var API_ROOT = "https://api.inindca.com/api/v2";
+// var API_ROOT = "https://api.inindca.com/api/v2";
+var API_ROOT = "https://api.mypurecloud.com/api/v2";
 
 // This login will eventually expire so you may want to add in some retry login
 //   logic if a request fails due to no longer being unauthenticated.
