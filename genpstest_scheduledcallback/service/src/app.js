@@ -15,8 +15,8 @@ var healthRoutes = require("./routes/health");
 var scheduledCallbackRoutes = require("./routes/scheduledCallback");
 
 var server;
-var IP = "127.0.0.1";
-var PORT = "8009";
+var IP = "172.66.47.32";
+var PORT = "443";
 
 var startServer = function () {
 
