@@ -78,7 +78,7 @@
             // queueId of the queue onto which this callback will be placed
             queueId: "ae82e4e6-898e-2227-8979-49c9a4fbc1f8",
             // Should use default script if `null`
-            scriptId: null
+            //scriptId: null
         };
         scheduleCallback(data);
     };
