@@ -15,7 +15,8 @@
 		const xhr = new XMLHttpRequest();
 		xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
 		xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-		const body = scheduledCallbackData
+		console.log(scheduledCallbackData);
+		const body = scheduledCallbackData;
 		xhr.onload = () => {
 		  if (xhr.readyState == 4 && xhr.status == 201) {
 			console.log(JSON.parse(xhr.responseText));
