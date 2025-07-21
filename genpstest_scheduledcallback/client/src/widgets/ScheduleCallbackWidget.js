@@ -17,7 +17,7 @@
 		
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,Authorization,ININ-Client-Path");
+		xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,Authorization,ININ-Client-Path,*");
 		xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
 		xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS,HEAD,PATCH');
 		xhr.setRequestHeader('Authorization', 'Bearer Tusgc-HivBdGLDgz6HTo6a_Wmd9lmnMPyyerGKOiD_fzKTAekP2btNNpnciDum6ZUwD3fQoQX7aOh7amJ1Zopg');
