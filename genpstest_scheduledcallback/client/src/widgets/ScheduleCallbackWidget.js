@@ -20,6 +20,7 @@
 		xhr.setRequestHeader('Authorization', 'Bearer Tusgc-HivBdGLDgz6HTo6a_Wmd9lmnMPyyerGKOiD_fzKTAekP2btNNpnciDum6ZUwD3fQoQX7aOh7amJ1Zopg');
 	
 		console.log(scheduledCallbackData);
+		console.log(JSON.stringify(scheduledCallbackData));
 		
 		const body = scheduledCallbackData;
 		
@@ -31,7 +32,7 @@
 		  }
 		};
 		
-		xhr.send(body);
+		xhr.send(JSON.stringify(body));
 		
         //return serviceApi.post("/purecloud/scheduledcallback", scheduledCallbackData)
         //.then(function (data) {
