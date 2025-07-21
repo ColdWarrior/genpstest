@@ -76,7 +76,7 @@
             // country code (for dialing purposes)
             countryCode: "US",
             // queueId of the queue onto which this callback will be placed
-            queueId: "ae82e4e6-898e-2227-8979-49c9a4fbc1f8",
+            queueId: "bcae9a4e-998a-4135-a495-46cf47cdb8ee",
             // Should use default script if `null`
             //scriptId: null
         };
