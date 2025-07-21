@@ -18,7 +18,7 @@
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		
-		const hashQueryParams = URLSearchParams(window.location.hash);
+		const hashQueryParams = new URLSearchParams(window.location.hash);
 		const accesstoken = hashQueryParams.get('access_token');
 		
 		console.log(accesstoken);
