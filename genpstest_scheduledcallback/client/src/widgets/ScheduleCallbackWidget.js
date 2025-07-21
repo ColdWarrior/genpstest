@@ -21,7 +21,7 @@
 		console.log(window.location.hash);
 		
 		let hashQueryParams = new window.URLSearchParams(window.location.hash);
-		const accesstoken = hashQueryParams.get("access_token");
+		const accesstoken = hashQueryParams.get("#access_token");
 		
 		console.log(accesstoken);
 		
