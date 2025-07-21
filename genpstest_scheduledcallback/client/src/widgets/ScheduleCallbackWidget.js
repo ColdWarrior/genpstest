@@ -17,7 +17,14 @@
 		
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhr.setRequestHeader('Authorization', 'Bearer Tusgc-HivBdGLDgz6HTo6a_Wmd9lmnMPyyerGKOiD_fzKTAekP2btNNpnciDum6ZUwD3fQoQX7aOh7amJ1Zopg');
+		
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const accesstoken = urlParams.get('access_token');
+		
+		console.log(accesstoken);
+		
+		xhr.setRequestHeader('Authorization', 'Bearer ' + accesstoken);
 	
 		console.log(scheduledCallbackData);
 		console.log(JSON.stringify(scheduledCallbackData));
