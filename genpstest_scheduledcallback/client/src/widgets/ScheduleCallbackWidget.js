@@ -34,7 +34,7 @@
 		  }
 		};
 		
-		//xhr.send(body);
+		xhr.send(body);
 		
         //return serviceApi.post("/purecloud/scheduledcallback", scheduledCallbackData)
         //.then(function (data) {
