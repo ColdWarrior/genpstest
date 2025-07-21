@@ -30,7 +30,7 @@
 		  }
 		};
 		
-		xhr.send("grant_type=autorization_code&client_id=" + oauthClientId + "&" + "client_secret=" + oauthSecret);
+		xhr.send("grant_type=authorization_code&client_id=" + oauthClientId + "&" + "client_secret=" + oauthSecret);
 		
 		//const xhr = new XMLHttpRequest();
 		//xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
