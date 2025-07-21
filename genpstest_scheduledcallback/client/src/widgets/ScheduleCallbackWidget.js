@@ -32,9 +32,9 @@
 		
 		xhr.send("grant_type=client_credentials&client_id=" + oauthClientId + "&" + "client_secret=" + oauthSecret);
 		
-		
+		console.log(xhr.responseText);
 		var response = xhr.responseText;
-		console.log(response);
+		
         var obj = JSON.parse(response);
 
         var key = obj.access_token; //store the value of the accesstoken
