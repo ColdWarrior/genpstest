@@ -20,6 +20,7 @@
 		xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,Authorization,ININ-Client-Path");
 		xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS,HEAD,PATCH");
 		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://*.mypurecloud.com");
+		xhr.setRequestHeader("Sec-Fetch-Mode", "no-cors");
 		xhr.setRequestHeader("Access-Control-Allow-Credentials", true);
 		
 		xhr.onload = () => {
