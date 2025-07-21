@@ -13,8 +13,7 @@
 		
 		
 		const xhr = new XMLHttpRequest();
-		//xhr.open("POST", "https://login.mypurecloud.com/oauth/token");
-		xhr.open("POST", "https://apps.mypurecloud.com/directory/#/admin/integrations/authorized-apps/e1384c8b-3f61-4423-8055-8888ef1b915a");
+		xhr.open("POST", "https://login.mypurecloud.com/oauth/token");
 		
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
