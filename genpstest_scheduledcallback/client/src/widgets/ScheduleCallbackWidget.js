@@ -4,19 +4,18 @@
 
     // This URI should be the URI to your website's back-end service.  In this
     //   case it is the service we have created locally.
-    
-
-	
-	
-	//var serviceApi = new RestApi("https://callbacktest.abundo.dev");
+	// var serviceApi = new RestApi("https://callbacktest.abundo.dev");
 
     // Schedules a callback with the PureCloud Api
     var scheduleCallback = function (scheduledCallbackData) {
 		const xhr = new XMLHttpRequest();
 		xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
 		xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+		
 		console.log(scheduledCallbackData);
+		
 		const body = scheduledCallbackData;
+		
 		xhr.onload = () => {
 		  if (xhr.readyState == 4 && xhr.status == 201) {
 			console.log(JSON.parse(xhr.responseText));
