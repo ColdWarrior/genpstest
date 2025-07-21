@@ -17,8 +17,8 @@
 		
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://callbacktest.abundo.dev");
 		xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
+		xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 		xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
 		xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
 		
