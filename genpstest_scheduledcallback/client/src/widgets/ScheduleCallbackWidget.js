@@ -32,6 +32,17 @@
 		
 		xhr.send("grant_type=client_credentials&client_id=" + oauthClientId + "&" + "client_secret=" + oauthSecret);
 		
+		
+		var response = xhr.responseText;
+
+        var obj = JSON.parse(response);
+
+        var key = obj.access_token; //store the value of the accesstoken
+		
+		var accesskey = "Bearer " + key
+		
+		console.log(accesskey);
+		
 		//const xhr = new XMLHttpRequest();
 		//xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
 		//xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
