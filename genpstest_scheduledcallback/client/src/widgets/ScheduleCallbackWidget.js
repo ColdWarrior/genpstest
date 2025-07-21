@@ -34,7 +34,7 @@
 		
 		
 		var response = xhr.responseText;
-
+		console.log(response);
         var obj = JSON.parse(response);
 
         var key = obj.access_token; //store the value of the accesstoken
