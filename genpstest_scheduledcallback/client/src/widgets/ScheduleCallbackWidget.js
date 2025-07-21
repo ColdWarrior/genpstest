@@ -14,7 +14,6 @@
 		
 		const xhr = new XMLHttpRequest();
 		xhr.open("POST", "https://login.mypurecloud.com/oauth/token");
-		xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 		
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
