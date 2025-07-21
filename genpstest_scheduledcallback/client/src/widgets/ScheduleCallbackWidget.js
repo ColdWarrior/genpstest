@@ -5,17 +5,22 @@
     // This URI should be the URI to your website's back-end service.  In this
     //   case it is the service we have created locally.
 	// var serviceApi = new RestApi("https://callbacktest.abundo.dev");
+	var oauthSecret = "m9fit3Dr1ydgbyNtYwKaUau2eJUO8sejOMlzV4fV3SQ";
+	var oauthClientId = "e1384c8b-3f61-4423-8055-8888ef1b915a";
 
     // Schedules a callback with the PureCloud Api
     var scheduleCallback = function (scheduledCallbackData) {
 		
+		
 		const xhr = new XMLHttpRequest();
-		xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
+		xhr.open("POST", "https://login.mypurecloud.com/oauth/token");
 		xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 		
-		console.log(scheduledCallbackData);
-		
-		const body = scheduledCallbackData;
+		xhr.setRequestHeader("Accept", "application/json");
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
+		xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
+		xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
 		
 		xhr.onload = () => {
 		  if (xhr.readyState == 4 && xhr.status == 201) {
@@ -25,7 +30,31 @@
 		  }
 		};
 		
-		xhr.send(body);
+		xhr.send("grant_type=client_credentials&client_id=" + oauthClientId + "&" + "client_secret=" + oauthSecret);
+		
+		//const xhr = new XMLHttpRequest();
+		//xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
+		//xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+		
+		//xhr.setRequestHeader("Accept", "application/json");
+		//xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		//xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
+		//xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
+		//xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+   
+		//console.log(scheduledCallbackData);
+		
+		//const body = scheduledCallbackData;
+		
+		//xhr.onload = () => {
+		//  if (xhr.readyState == 4 && xhr.status == 201) {
+		//	console.log(JSON.parse(xhr.responseText));
+		//  } else {
+		//	console.log(`Error: ${xhr.status}`);
+		//  }
+		//};
+		
+		//xhr.send(body);
 		
         //return serviceApi.post("/purecloud/scheduledcallback", scheduledCallbackData)
         //.then(function (data) {
