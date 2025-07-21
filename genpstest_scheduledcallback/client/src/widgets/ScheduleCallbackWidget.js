@@ -11,16 +11,20 @@
     // Schedules a callback with the PureCloud Api
     var scheduleCallback = function (scheduledCallbackData) {
 		
-		
 		const xhr = new XMLHttpRequest();
-		xhr.open("POST", "https://login.mypurecloud.com/oauth/token");
+		xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
+		xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 		
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,Authorization,ININ-Client-Path");
-		xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS,HEAD,PATCH");
-		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://callbacktest.abundo.dev");
-		xhr.setRequestHeader("Access-Control-Allow-Credentials", true);
+		xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
+		xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS,HEAD,PATCH');
+		xhr.setRequestHeader('Authorization', 'Bearer Tusgc-HivBdGLDgz6HTo6a_Wmd9lmnMPyyerGKOiD_fzKTAekP2btNNpnciDum6ZUwD3fQoQX7aOh7amJ1Zopg');
+   
+		console.log(scheduledCallbackData);
+		
+		const body = scheduledCallbackData;
 		
 		xhr.onload = () => {
 		  if (xhr.readyState == 4 && xhr.status == 201) {
@@ -29,41 +33,6 @@
 			console.log(`Error: ${xhr.status}`);
 		  }
 		};
-		
-		xhr.send("grant_type=client_credentials&client_id=" + oauthClientId + "&" + "client_secret=" + oauthSecret);
-		
-		console.log(xhr.responseText);
-		var response = xhr.responseText;
-		
-        var obj = JSON.parse(response);
-
-        var key = obj.access_token; //store the value of the accesstoken
-		
-		var accesskey = "Bearer " + key
-		
-		console.log(accesskey);
-		
-		//const xhr = new XMLHttpRequest();
-		//xhr.open("POST", "https://api.mypurecloud.com/api/v2/conversations/callbacks");
-		//xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-		
-		//xhr.setRequestHeader("Accept", "application/json");
-		//xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		//xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
-		//xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
-		//xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-   
-		//console.log(scheduledCallbackData);
-		
-		//const body = scheduledCallbackData;
-		
-		//xhr.onload = () => {
-		//  if (xhr.readyState == 4 && xhr.status == 201) {
-		//	console.log(JSON.parse(xhr.responseText));
-		//  } else {
-		//	console.log(`Error: ${xhr.status}`);
-		//  }
-		//};
 		
 		//xhr.send(body);
 		
