@@ -2,6 +2,21 @@
 <html>
 <head>
 
+</script>
+  (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+  (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+  d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+  })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
+  
+  ac('init', 'c29d7525-93bf-43be-b5bb-c63609862dba', { 
+    orgId: '7c01f328-d8d1-4d9e-9e84-407b957139cb', 
+    environment: 'apps.mypurecloud.com',
+	region: 'use1'
+  });
+  
+  ac('pageview');
+</script>
+	
 <script type="text/javascript" charset="utf-8">
   (function (g, e, n, es, ys) {
     g['_genesysJs'] = e;
@@ -27,22 +42,10 @@
             }
         }
     });
-	
-
-  (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
-  (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
-  d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
-  })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
-  
-  ac('init', 'c29d7525-93bf-43be-b5bb-c63609862dba', { 
-    orgId: '7c01f328-d8d1-4d9e-9e84-407b957139cb', 
-    environment: 'apps.mypurecloud.com',
-	region: 'use1'
-  });
-  
-  ac('pageview');
 
 </script>
+
+
 
 <div id="genesys-support-center"></div>
 
