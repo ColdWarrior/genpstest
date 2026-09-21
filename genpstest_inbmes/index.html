@@ -2,6 +2,21 @@
 <html>
 <head>
 
+<script>
+  (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+  (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+  d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+  })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
+  
+  ac('init', 'c29d7525-93bf-43be-b5bb-c63609862dba', { 
+    orgId: '7c01f328-d8d1-4d9e-9e84-407b957139cb', 
+    environment: 'mypurecloud.com',
+	region: 'use1'
+  });
+  
+  ac('pageview');
+</script>
+	
 <script type="text/javascript" charset="utf-8">
   (function (g, e, n, es, ys) {
     g['_genesysJs'] = e;
@@ -15,13 +30,17 @@
     environment: 'prod',
     deploymentId: 'c29d7525-93bf-43be-b5bb-c63609862dba'
   });
-  
-  
+    
   Genesys("subscribe", "MessagingService.messagesReceived", function(e) {
   var sound = new Audio("https://cdn.freesound.org/previews/374/374936_2475994-lq.mp3");
     // OldTrombone - G2 (Trombone_Short_G2_v1_4.wav) by sgossner -- https://freesound.org/s/374936/ -- License: Creative Commons 0
   if (e.data) {
      const respDataObject = e.data || {};
+  Genesys("subscribe", "MessagingService.messagesReceived", function(e) {
+    var sound = new Audio("https://cdn.freesound.org/previews/374/374936_2475994-lq.mp3");
+    // OldTrombone - G2 (Trombone_Short_G2_v1_4.wav) by sgossner -- https://freesound.org/s/374936/ -- License: Creative Commons 0
+    if (e.data) {
+        const respDataObject = e.data || {};
         if (respDataObject.messages[0].direction == "Outbound") 
             {
                 sound.play();
@@ -35,8 +54,11 @@
   })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
   ac('init', '', { region: 'use1' });
   ac('pageview');
-
+    });
+	
 </script>
+
+
 
 <div id="genesys-support-center"></div>
 
@@ -46,8 +68,7 @@
 
 	<p class="solid"></p>
 	
-	<h1>Gen PS Test Page - For testing only XXX</h1>
-  
+	<h1>Gen PS Test Page -  For testing only</h1>
 	<p>Description: This is a test page for the Genesys Widget.</p>
 
 </body>
